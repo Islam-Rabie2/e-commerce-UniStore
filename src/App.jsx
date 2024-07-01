@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./components/pages/home/HomePage";
-import NoPage from './components/pages/noPage/NoPage';
+import NoPage from "./components/pages/noPage/NoPage";
 function App() {
   return (
     <div>
