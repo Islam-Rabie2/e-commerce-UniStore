@@ -6,6 +6,7 @@ import Testimonial from "../../components/testimonial/Testimonial";
 import Track from "../../components/track/Track";
 
 function HomePage() {
+
   return (
     <Layout>
       <HeroSection />
