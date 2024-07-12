@@ -153,7 +153,7 @@ const AdminDashboard = () => {
                   <h2 className="title-font font-medium text-3xl text-pink-400 fonts1">
                     10
                   </h2>
-                  <p className=" text-pink-500  font-bold">Total Order</p>
+                  <p className=" text-pink-500  font-bold">Total User</p>
                 </div>
               </Tab>
             </TabList>
