@@ -12,7 +12,7 @@ const Testimonial = () => {
           </h1>
           {/* para  */}
           <h2 className=" text-center text-2xl font-semibold mb-10">
-            What our <span className=" text-pink-500">customers</span> are
+            What our <span className=" text-brown-800">customers</span> are
             saying
           </h2>
 
@@ -31,7 +31,7 @@ const Testimonial = () => {
                   ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
                   adaptogen squid fanny pack vaporware.
                 </p>
-                <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
+                <span className="inline-block h-1 w-10 rounded bg-brown-600 mt-6 mb-4" />
                 <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
                   Kamal Nayan Upadhyay
                 </h2>
@@ -53,7 +53,7 @@ const Testimonial = () => {
                   ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
                   adaptogen squid fanny pack vaporware.
                 </p>
-                <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
+                <span className="inline-block h-1 w-10 rounded bg-brown-600 mt-6 mb-4" />
                 <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
                   S Mishra
                 </h2>
@@ -75,7 +75,7 @@ const Testimonial = () => {
                   ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
                   adaptogen squid fanny pack vaporware.
                 </p>
-                <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
+                <span className="inline-block h-1 w-10 rounded bg-brown-600 mt-6 mb-4" />
                 <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">
                   XYZ{" "}
                 </h2>

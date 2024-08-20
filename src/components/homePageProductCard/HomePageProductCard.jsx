@@ -31,10 +31,10 @@ const HomePageProductCard = () => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
   return (
-    <div className="mt-10">
+    <div className="mt-14">
       {/* Heading  */}
-      <div className="">
-        <h1 className=" text-center mb-5 text-2xl font-semibold">
+      <div className="flex px-5">
+        <h1 className=" text-center mb-2 text-3xl text-brown-700 font-semibold border-b-4 border-brown-700">
           Bestselling Products
         </h1>
       </div>
@@ -45,13 +45,13 @@ const HomePageProductCard = () => {
           <div className="flex justify-center">{loading && <Loader />}</div>
           <div className="flex flex-wrap -m-4">
             {getAllProduct.slice(0, 8).map((item, index) => {
-              const { id, title, price, productImageUrl } = item;
+              const { id, title, price, productImageUrl} = item;
               return (
                 <div key={index} className="p-4 w-full md:w-1/4">
-                  <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                  <div className=" h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                     <img
                       onClick={() => navigate(`/productinfo/${id}`)}
-                      className="lg:h-80  h-96 w-full"
+                      className="lg:h-40  h-40 m-auto"
                       src={productImageUrl}
                       alt="blog"
                     />
@@ -59,7 +59,7 @@ const HomePageProductCard = () => {
                       <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                         UniStore
                       </h2>
-                      <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                      <h1 className="title-font text-lg font-medium text-brown-600 mb-3">
                         {title.substring(0, 25)}
                       </h1>
                       <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
@@ -70,15 +70,17 @@ const HomePageProductCard = () => {
                         {cartItems.some((p) => p.id === item.id) ? (
                           <button
                             onClick={() => deleteCart(item)}
-                            className=" bg-red-800 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold"
+                            className=" bg-red-900 hover:bg-brown-700 w-full text-white py-[4px] rounded-lg font-bold"
                           >
                             Delete From Cart
                           </button>
                         ) : (
                           <button
                             onClick={() => addCart(item)}
-                            className=" bg-pink-500 hover:bg-pink-600 w-full text-white py-[4px] rounded-lg font-bold"
-                          >Add To Cart</button>
+                            className=" bg-zinc_900 hover:bg-brown-700 w-full text-white py-[4px] rounded-lg font-bold"
+                          >
+                            Add To Cart
+                          </button>
                         )}
                       </div>
                     </div>

@@ -3,14 +3,13 @@ import Layout from "../../components/layout/Layout";
 import { useContext } from "react";
 import myContext from "../../context/myContext";
 import Loader from "../../components/loader/Loader";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, deleteFromCart } from "../../redux/cartSlice";
-import toast from "react-hot-toast";
 
 const CategoryPage = () => {
   const { categoryname } = useParams();
+
   const context = useContext(myContext);
   const { getAllProduct, loading } = context;
+
   const navigate = useNavigate();
 
   // filter product
@@ -18,24 +17,6 @@ const CategoryPage = () => {
     obj.category.includes(categoryname)
   );
   // console.log(filterProduct)
-
-  const cartItems = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-  const addCart = (item) => {
-    // console.log(item)
-    dispatch(addToCart(item));
-    toast.success("Add to cart");
-  };
-  const deleteCart = (item) => {
-    dispatch(deleteFromCart(item));
-    toast.success("Delete cart");
-  };
-  // console.log(cartItems)
-
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
-  
   return (
     <Layout>
       <div className="mt-10">
@@ -71,13 +52,13 @@ const CategoryPage = () => {
                             />
                             <div className="p-6">
                               <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                UniStore
+                                E-bharat
                               </h2>
                               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                 {title.substring(0, 25)}
                               </h1>
                               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                ${price}
+                                ₹{price}
                               </h1>
 
                               <div className="flex justify-center ">
